@@ -159,7 +159,6 @@ export class AngularHttpProtocol extends ResourceProtocol {
 
     private makeRequest(params: AngularHttpRequestData): Observable<any> {
         let result: Observable<any>;
-        const requestBody = params.body.length === 0 ? null : (params.body.length === 1 ? params.body[0] : params.body);
         if (params.method === XHRMethod.GET) {
             result = this.httpClient.get(params.url, params.info as any);
         } else if (params.method === XHRMethod.DELETE) {
@@ -169,11 +168,11 @@ export class AngularHttpProtocol extends ResourceProtocol {
         } else if (params.method === XHRMethod.OPTIONS) {
             result = this.httpClient.options(params.url, params.info as any);
         } else if (params.method === XHRMethod.PATCH) {
-            result = this.httpClient.patch(params.url, requestBody, params.info as any);
+            result = this.httpClient.patch(params.url, params.body, params.info as any);
         } else if (params.method === XHRMethod.POST) {
-            result = this.httpClient.post(params.url, requestBody, params.info as any);
+            result = this.httpClient.post(params.url, params.body, params.info as any);
         } else if (params.method === XHRMethod.PUT) {
-            result = this.httpClient.put(params.url, requestBody, params.info as any);
+            result = this.httpClient.put(params.url, params.body, params.info as any);
         } else {
             throw new TypeError(`Cannot send request: ${params.method} is not a known http method`);
         }

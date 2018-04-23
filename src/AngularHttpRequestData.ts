@@ -6,7 +6,7 @@ import { XHRMethod } from './XHRMethod';
 /**
  * Request data.
  */
-export interface AngularHttpRequestData {
+export interface AngularHttpRequestData<T = any> {
     /**
      * Request information.
      */
@@ -32,7 +32,7 @@ export interface AngularHttpRequestData {
     /**
      * Request body.
      */
-    body: any[];
+    body: T;
     /**
      * Timeout. ```0``` means no timeout.
      */
