@@ -1,4 +1,5 @@
 import { ResponseType } from './ResponseType';
+import { XHRMethod } from '.';
 
 /**
  * Request parameters.
@@ -28,4 +29,8 @@ export interface AngularHttpRequestParams {
      * Request timeout. Do not set this value or set to ```0``` to disable timeout.
      */
     timeout?: number;
+    /**
+     * Request http method (defualt GET).
+     */
+    method?: XHRMethod;
 }

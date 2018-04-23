@@ -124,7 +124,7 @@ export class AngularHttpProtocol extends ResourceProtocol {
                 }
             });
         }
-        const method: XHRMethod = raw.params.method || XHRMethod.GET;
+        const method: XHRMethod = rawParams.method || XHRMethod.GET;
         return {
             info: request,
             body: rawParams.body,

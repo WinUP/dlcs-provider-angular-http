@@ -32,6 +32,7 @@ SerializableNode.set(StorageProtocol.config, StorageProtocol.configKeys.root.loc
 |-|:-|:-|
 | ```responseType``` | Set by configuration | Respnse type |
 | ```contentType``` | Set by configuration | Content type |
+| ```method``` | ```XHRMethod.GET``` | Request http method. |
 | ```headers``` | ```undefined``` | Extra headers |
 | ```querys``` | ```undefined``` | URL query parameters |
 | ```body``` | ```undefined``` | Request body, only affects POST/PUT/PATCH |
