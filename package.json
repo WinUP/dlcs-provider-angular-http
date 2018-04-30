@@ -26,8 +26,8 @@
   "dependencies": {
     "@angular/common": ">=5.0.0",
     "@angular/core": ">=5.0.0",
-    "@dlcs/core": "~1.0.5",
-    "@dlcs/tools": "~1.0.6",
+    "@dlcs/core": "~1.1.0",
+    "@dlcs/tools": "~1.0.8",
     "rxjs": "^5.5.10"
   },
   "publishConfig": {
