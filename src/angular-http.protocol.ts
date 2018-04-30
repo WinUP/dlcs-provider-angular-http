@@ -5,6 +5,7 @@ import { TimeoutError } from 'rxjs/util/TimeoutError';
 import { catchError } from 'rxjs/operators/catchError';
 import { Observable } from 'rxjs/Observable';
 import { timeout } from 'rxjs/operators/timeout';
+import { _throw } from 'rxjs/observable/throw';
 
 import { AngularHttpRequestParams } from './AngularHttpRequestParams';
 import { AngularHttpRequestData } from './AngularHttpRequestData';
@@ -192,14 +193,14 @@ export class AngularHttpProtocol extends ResourceProtocol {
         let result: Observable<any> = this.makeRequest(data);
         result = result.pipe(catchError(e => {
             return e instanceof TimeoutError
-                ? Observable.throw(new HttpErrorResponse({
+                ? _throw(new HttpErrorResponse({
                     error: e.message,
                     status: 408,
                     headers: data.info.headers,
                     statusText: e.name,
                     url: request.address
                 }))
-                : Observable.throw(e);
+                : _throw(e);
         }));
         injector && (result = injector(result, InjectorTimepoint.AfterSent));
         return result;
