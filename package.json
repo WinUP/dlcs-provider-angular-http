@@ -1,6 +1,6 @@
 {
   "name": "@dlcs/provider-angular-http",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Angular 5+ HttpClient provider for Deus Legem Creation System",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
