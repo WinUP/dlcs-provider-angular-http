@@ -1,7 +1,7 @@
 {
   "name": "@dlcs/provider-angular-http",
-  "version": "1.1.1",
-  "description": "Angular 5+ HttpClient provider for Deus Legem Creation System",
+  "version": "1.2.0",
+  "description": "Angular 6+ HttpClient provider for Deus Legem Creation System",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
@@ -24,11 +24,11 @@
     "typescript": "2.8.3"
   },
   "dependencies": {
-    "@angular/common": ">=5.0.0",
-    "@angular/core": ">=5.0.0",
-    "@dlcs/core": "~1.1.0",
-    "@dlcs/tools": "~1.0.8",
-    "rxjs": "^5.5.10"
+    "@angular/common": ">=6.0.0",
+    "@angular/core": ">=6.0.0",
+    "@dlcs/core": "~1.2.0",
+    "@dlcs/tools": "~1.2.1",
+    "rxjs": ">=6.0.0"
   },
   "publishConfig": {
     "access": "public"

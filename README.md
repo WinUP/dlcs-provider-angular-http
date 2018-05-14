@@ -14,11 +14,6 @@ Resource provider for Angular HttpClient.
 | ```server.contentType``` | ```'application/json'``` | Default content type |
 | ```assets.address``` | ```''``` | Default address from ```assets``` protocol |
 
-```typescript
-SerializableNode.set(StorageProtocol.config, StorageProtocol.configKeys.root.cache, 'ROOT');
-SerializableNode.set(StorageProtocol.config, StorageProtocol.configKeys.root.local, 'DLCS');
-```
-
 ### Supported protocol
 
 * ```remote``` for access default server defined in Configuration.
@@ -65,10 +60,10 @@ resourceManager.registerProtocol(new AngularHttpProtocol(this.httpClient)); // A
 // Request data
 resourceManager.request.to(`http://www.google.com`).tag('google').send();
 // Request using default server
-SerializableNode.set(AngularHttpProtocol.config, AngularHttpProtocol.configKeys.server.address, 'http://www.a.org');
+http.config.server.address = 'http://www.a.org';
 resourceManager.request.to(`remote:///test.txt`).tag('test').send();
 // Request static file
-SerializableNode.set(AngularHttpProtocol.config, AngularHttpProtocol.configKeys.assets.address, '/assets');
+http.config.assets.address = '/assets';
 resourceManager.request.to(`assets:///test.txt`).tag('test_local').send();
 // POST data
 resourceManager.request.to(`http://www.test.org`).param({ method: XHRMethod.POST }).tag('google').send();

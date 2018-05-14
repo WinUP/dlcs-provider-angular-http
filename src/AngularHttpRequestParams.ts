@@ -20,7 +20,7 @@ export interface AngularHttpRequestParams {
     /**
      * Query parameters.
      */
-    querys?: { [key: string]: string };
+    queries?: { [key: string]: string };
     /**
      * Request body. Only affects POST/PUT/PATCH.
      */
