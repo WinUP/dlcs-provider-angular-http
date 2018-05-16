@@ -1,7 +1,9 @@
 language: node_js
 node_js:
   - '10'
-install: npm install
+install:
+  - npm install
+  - npm install @angular/core@6 @angular/common@6 @dlcs/core@1 rxjs@6
 script: npm run tsc
 deploy:
   provider: npm
