@@ -1,6 +1,6 @@
 {
   "name": "@dlcs/provider-angular-http",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Angular 6+ HttpClient provider for Deus Legem Creation System",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,15 +20,15 @@
   },
   "homepage": "https://github.com/WinUP/dlcs-provider-angular-http#readme",
   "devDependencies": {
-    "tslint": "5.9.1",
+    "tslint": "5.10.0",
     "typescript": "2.8.3"
   },
   "dependencies": {
-    "@angular/common": ">=6.0.0",
-    "@angular/core": ">=6.0.0",
-    "@dlcs/core": "~1.2.0",
-    "@dlcs/tools": "~1.2.1",
-    "rxjs": ">=6.0.0"
+    "@angular/common": "^6.0.2",
+    "@angular/core": "^6.0.2",
+    "@dlcs/core": "^1.2.0",
+    "@dlcs/tools": "^1.2.2",
+    "rxjs": "^6.1.0"
   },
   "publishConfig": {
     "access": "public"
