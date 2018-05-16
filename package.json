@@ -24,10 +24,12 @@
     "typescript": "2.8.3"
   },
   "dependencies": {
+    "@dlcs/tools": "^1.2.2"
+  },
+  "peerDependencies": {
     "@angular/common": "^6.0.2",
     "@angular/core": "^6.0.2",
     "@dlcs/core": "^1.2.0",
-    "@dlcs/tools": "^1.2.2",
     "rxjs": "^6.1.0"
   },
   "publishConfig": {
